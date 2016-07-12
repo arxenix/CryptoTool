@@ -57,11 +57,6 @@ def privateToXMLDSigHexFile(privateKey, file):
     tree.write(file)
     file.close()
 
-def toASN1(num):
-    hex = toPaddedHex(num)
-    length = toPaddedHex(len(hex)/2)
-    return "02"+length+hex
-
 def privateToPEM(privateKey):
     seq = DerSequence()
     seq.append(0)
